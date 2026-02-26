@@ -6,7 +6,7 @@ import { cartProductI } from '@/interface/cart';
 import { deleteItem, updateItem } from '@/app/_actions/cart.action';
 import { cartContext } from '@/providers/cart-provider';
 
-export default function CartItem({ product, setproducts }: { product: cartProductI, setproducts: (products: cartProductI) => void }) {
+export default function CartItem({ product, setproducts }: { product: cartProductI, setproducts: React.Dispatch<React.SetStateAction<cartProductI[]>> }) {
     const { handleCart } = useContext(cartContext)
     async function deleteProduct(id: string) {
         try {
