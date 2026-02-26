@@ -14,7 +14,7 @@ export default async function categories() {
                 <div className='grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4 lg:gap-6'>
                     {categories.map((cats) =>
                         <div className=' shadow-md rounded-lg overflow-hidden mt-4' key={cats._id}>
-                            <div className=' col-span-1 h-[300px] relative '>
+                            <div className=' col-span-1 h-60 relative '>
                                 <Image fill src={cats.image} alt={cats.name}></Image>
                             </div>
                             <p className='text-center font-bold text-lg'>{cats.name}</p>
